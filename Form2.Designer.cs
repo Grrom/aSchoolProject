@@ -201,6 +201,7 @@ namespace AccountRegistration
             this.submitButton.TabIndex = 17;
             this.submitButton.Text = "submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // Form2
             // 

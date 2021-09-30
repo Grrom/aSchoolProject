@@ -32,13 +32,33 @@ namespace AccountRegistration
             StudentInfoClass.Program = programBox.Text.Trim();
             StudentInfoClass.Address = addressBox.Text.Trim();
 
+            string parseFails = "Incorrect input, Please Check your input for the following:\n";
 
-            long.TryParse(ageBox.Text, out StudentInfoClass.Age);
-            long.TryParse(contactBox.Text, out StudentInfoClass.ContactNo);
-            long.TryParse(studentNoBox.Text, out StudentInfoClass.StudentNo);
+            if (isEmpty(StudentInfoClass.FirstName))
+                parseFails += "First Name, ";
+            if (isEmpty(StudentInfoClass.LastName))
+                parseFails += "Last Name, ";
+            if (isEmpty(StudentInfoClass.MiddleName))
+                parseFails += "Middle Name, ";
+            if (isEmpty(StudentInfoClass.Address))
+                parseFails += "Address, ";
+            if (isEmpty(StudentInfoClass.Program))
+                parseFails += "Program, ";
 
-            new Form2().Show();
+            if (!long.TryParse(ageBox.Text, out StudentInfoClass.Age))
+                parseFails += "Age, ";
+            if (!long.TryParse(contactBox.Text, out StudentInfoClass.ContactNo))
+                parseFails += "Contact Number, ";
+            if (!long.TryParse(studentNoBox.Text, out StudentInfoClass.StudentNo))
+                parseFails += "Student Number, ";
+
+            if (parseFails.Length > 60)
+                MessageBox.Show(parseFails);
+            else
+                new Form2().Show();
         }
+
+        private bool isEmpty(string text) => text.Length == 0;
 
     }
 }
