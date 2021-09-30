@@ -32,6 +32,15 @@ namespace AccountRegistration
             DelFirstName = new DelegateText(StudentInfoClass.GetFirstName);
             DelAddress = new DelegateText(StudentInfoClass.GetAddress);
 
+            StudentNo.Text = DelStudentNo(StudentInfoClass.StudentNo).ToString();
+            Program.Text = DelProgram(StudentInfoClass.Program).ToString();
+            LastName.Text = DelLastName(StudentInfoClass.LastName).ToString();
+            FirstName.Text = DelFirstName(StudentInfoClass.FirstName).ToString();
+            MiddleName.Text = DelMiddleName(StudentInfoClass.MiddleName).ToString();
+            Age.Text = DelAge(StudentInfoClass.StudentNo).ToString();
+            ContactNo.Text = DelContact(StudentInfoClass.ContactNo).ToString();
+            Address.Text = DelAddress(StudentInfoClass.Address).ToString();
+
         }
     }
 }
