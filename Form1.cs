@@ -26,6 +26,17 @@ namespace AccountRegistration
         private void nextButton_Click(object sender, EventArgs e)
         {
 
+            StudentInfoClass.FirstName = firstNameBox.Text.Trim();
+            StudentInfoClass.LastName = lastNameBox.Text.Trim();
+            StudentInfoClass.MiddleName = middleNameBox.Text.Trim();
+            StudentInfoClass.Program = programBox.Text.Trim();
+            StudentInfoClass.Address = addressBox.Text.Trim();
+
+
+            long.TryParse(ageBox.Text, out StudentInfoClass.Age);
+            long.TryParse(contactBox.Text, out StudentInfoClass.ContactNo);
+            long.TryParse(studentNoBox.Text, out StudentInfoClass.StudentNo);
+
             new Form2().Show();
         }
 

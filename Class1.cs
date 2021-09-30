@@ -6,13 +6,14 @@ public class StudentInfoClass
     public delegate long DelegateNumber(long num);
     public delegate string DelegateText(string text);
 
-    public long StudentNo;
-    public string Program;
-    public string LastName;
-    public string FirstName;
-    public string MiddleName;
-    public long Age;
-    public long ContactNo;
+    public static string Program;
+    public static string LastName;
+    public static string FirstName;
+    public static string MiddleName;
+    public static string Address;
+    public static long StudentNo;
+    public static long Age;
+    public static long ContactNo;
 
     public static string GetFirstName(string FirstName)
     {
