@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
+public delegate long DelegateNumber(long num);
+public delegate string DelegateText(string text);
 public class StudentInfoClass
 {
-    public delegate long DelegateNumber(long num);
-    public delegate string DelegateText(string text);
 
     public static string Program;
     public static string LastName;
